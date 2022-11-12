@@ -1,0 +1,115 @@
+@import '../../style/variables.scss';
+
+.tourItems {
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-content: flex-start;
+    // justify-content: space-between;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+
+}
+.tourItem {
+    max-width: 510px;
+    height: 100%;
+    box-shadow: 0px 2px 4px rgba(14, 86, 124, 0.16);
+    border-radius: 20px;
+    margin-bottom: 100px;
+    padding: 15px;
+    position: relative;
+    &-img {
+        width: 480px;
+        height: 250px;
+        border-radius: 20px;
+        background-color: $secondary;
+        margin-bottom: 30px;
+
+        &>img {
+            max-width: 480px;
+            border-radius: 20px;
+        }
+    }
+    &-name {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    &-descr {
+        font-size: 1rem;
+        color: $secondary;
+        width: 85%;
+        height: 50px;
+    }
+    &-price {
+        position: relative;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        &__text {
+            color: $thirdy;
+        }
+        &__num {
+            color: $primary;
+            font-size: 2rem;
+            font-weight: 600;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 5%;
+                bottom: 39px;
+                width: 120px;
+                height: 7px;
+                transform:  translateX(-20%);
+                background: $yellow;
+                opacity: 0.4;
+                z-index: -1;
+            }
+            
+        }
+    }
+    &-detail {
+        display: flex;
+        align-items: center;
+        &__icon {
+            margin-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        &__text {
+            color: $secondary;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+    }
+    &-like {
+        position: absolute;
+        right: 30px;
+        top: 300px;
+        background-color: #FBFBFB;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        &>button {
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+    }
+    &-review {
+        position: absolute;
+        right: 30px;
+        bottom: 20%;
+        &__grade {
+            color: $secondary;
+        }
+    }
+}
+.liked {
+    box-shadow: 0px 4px 8px rgba(44, 44, 44, 0.1);
+}

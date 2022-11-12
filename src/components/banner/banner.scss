@@ -1,0 +1,195 @@
+@import '../../style/variables.scss';
+
+.bg-1 {
+    background-image: url('../../images/banner.jpeg');
+}
+.bg-2 {
+    background-image: url('../../images/everest.jpeg');
+    background-position: center;
+}
+.bg-3 {
+    background-image: url('../../images/elbrus.jpeg');
+}
+.top-subheader {
+    position: relative;
+}
+.banner {
+    height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    color: #FFFFFF;
+    z-index: 1;
+    position: relative;
+    padding: 100px;
+    padding-bottom: 150px;
+    display: flex;
+    justify-content: space-between;
+    &-item {
+        display: flex;
+        width: 100%;
+        height: 100%;
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color:rgba(0, 0, 0, .3);
+        z-index: -1;
+        border-radius: 30px;
+
+    }
+    &-name {
+        line-height: 1rem;
+        text-transform: capitalize;
+    }
+    &-descr>p {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+    }
+    &-weather>p {
+        font-size: 1.5rem;
+    }
+    &-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &-right {
+        display: flex;
+        align-items: flex-end;
+    }
+    &-text {
+        &>a {
+            text-decoration: underline;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        &>p {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+            margin: 0;
+        }
+    }
+    &-icon {
+        border-radius: 100%;
+        background-color: #fff;
+        width: 65px;
+        height: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 25px;
+        margin-bottom: 30px;
+    }
+}
+
+.slider-btn {
+    display: flex;
+    &__arrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        border: #FFFFFF solid 1px;
+        margin-right: 10px;
+        cursor: pointer;
+        &:hover {
+            background-color: $green;
+            color: #FFFFFF;
+            border: none;
+        }
+    }
+    .dark-arrow {
+        border: 1px solid $thirdy;
+        width: 72px;
+        height: 72px;
+        font-size: 1.5rem;
+        &:hover {
+            color: #FFFFFF;
+            border: none;
+        }
+    }
+}
+
+
+.filter {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    width: 90%;
+    margin: 0 auto; 
+    height: 175px;
+    background-color: #fff;
+    bottom: -85px;
+    left: 5%;
+    border-radius: 15px;
+    box-shadow: 0px 43px 66px rgba(0, 0, 0, 0.07);
+    color: #212529;
+    z-index: 1;
+    &-item {
+        &__header{
+            position: relative;
+            &>h3 {
+                font-size: 1.75rem;
+                z-index: 0;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 8%;
+                    bottom: 10px;
+                    width: 120px;
+                    height: 7px;
+                    transform:  translateX(-20%);
+                    background: $yellow;
+                    z-index: -1;
+                }
+            }
+        }
+        &__btn {
+            margin-top: 15px;
+            display: flex;
+        }
+        &__descr {
+            margin-right: 45px;
+            color: #99A3AD;
+            text-decoration: underline;
+            font-size: 1.125rem;
+        }
+        &__search{
+            &-btn {
+                width: 110px;
+                height: 110px;
+                background-color: #28B0A6;
+                border-radius: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-descr>p {
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
+
+.links {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    position: absolute;
+    right: -50px;
+    font-size: 1.5rem;
+    color: #212529;
+    top: 100px;
+}

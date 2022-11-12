@@ -1,0 +1,157 @@
+@import '../../style/variables.scss';
+
+.footer {
+    margin-top: 135px;
+    &-topHeader {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #E9ECEF;
+        &__left {
+            display: flex;
+            justify-content: space-between;
+            &>button {
+                font-size: 1.5rem;
+                font-weight: 600;
+                border: 3px solid $primary;
+                color: $primary;
+                background-color: transparent;
+                border-radius: 100%;
+                height: 35px;
+                width: 35px;
+                margin-right: 15px;
+            }
+            &>h5 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: $primary;
+                margin-right: 70px;
+            }
+            &>p {
+                font-size: 1.5rem;
+                color: $secondary;
+            }
+        }
+        &__right {
+            &>a {
+                font-size: 1.5rem;
+                color: #212529;
+            }
+            &>span {
+                font-size: 1.5rem;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+    } 
+    &-header {
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #E9ECEF;
+        padding-bottom: 40px;
+
+        &__left {
+            &>p {
+                font-size: 1.5rem;
+                color: $green;
+            }
+            &>h4 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                color: $primary;
+            }
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &>a {
+                margin-top: 30px;
+            }
+            &-block {
+                display: flex;
+                align-items: center;
+                &>img {
+                    margin-right: 25px;
+                }
+                &>p {
+                    font-size: 24px;
+                    line-height: 2.7rem;
+                    font-weight: 400;
+                    &>span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    &-main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        &__left {
+            display: flex;
+        }
+        &__right {
+            &>p {
+                font-size: 1.5rem;
+                color: $primary;
+                text-transform: capitalize;
+            }
+            &>h5 {
+                font-size: 2.5rem;
+                font-weight: 500;
+                text-transform: capitalize;
+                margin-right: 25px;
+                margin-top: 15px;
+                margin-bottom: 40px;
+                &::after {
+                    content: url('../../images/Icon/arrow1.png');
+                }
+            }
+        }
+        &__navigation {
+            margin-right: 150px;
+            &>h4 {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $primary;
+                margin-bottom: 15px;
+            }
+            &>ul{
+                padding: 0px;
+                &>li {
+                    list-style: none;
+                    color: $thirdy;
+                    line-height: 2.5rem;
+                }
+            }
+        }
+    }
+    &-footer {
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E9ECEF;
+
+        &>a {
+            font-size: 1.5rem;
+            text-transform: capitalize;
+        }
+        &__links {
+            font-size: 1.5rem;
+        }
+    }
+    &-subFooter {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 30px;
+        &>img {
+            height: 24px;
+        }
+    }
+}

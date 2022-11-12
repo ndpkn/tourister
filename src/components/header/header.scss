@@ -1,0 +1,47 @@
+@import '../../style/variables.scss';
+
+.header {
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+    &-logo {
+        margin-right: 95px;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    &-links {
+        display: flex;
+        &__link {
+            list-style-type: none;
+            margin-right: 48px;
+            &>a {
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+        }
+    }
+    &-btns {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        &__login>button {
+            background-color: transparent;
+            border: none;
+            padding: 13px;
+            font-size: 1.25rem;
+            margin-right: 30px;
+        }
+        &__sign>button {
+            background-color: $green;
+            color: #FFFFFF;
+            border: none;
+            padding: 13px;
+            border-radius: 28px;
+            font-size: 1.25rem;
+        }
+    }
+}
+

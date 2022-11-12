@@ -1,0 +1,70 @@
+@import '../../style/variables.scss';
+
+.question {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    &-header>h2 {
+        font-size: 2.5rem;
+    }
+    &-subheader>p {
+        font-size: 1.5rem;
+        color: $secondary;
+    }
+    &-blocks {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        color: #FFFFFF;
+        position: relative;
+    }
+    &-block {
+        border-radius: 15px;
+        padding: 70px;
+        height: 550px;
+        width: 650px;
+        max-width: 650px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 70px;
+    }
+    &-left {
+        background-color: $green;
+        margin-right: 15px;
+    }
+    &-right {
+        background-color: $primary;
+        margin-left: 15px;
+    }
+    &-header>h4 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    &-descr>p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        text-align: center;
+    }
+    .questionBlock1 {
+        color: #BCF0EC;
+    }
+    .questionBlock2 {
+        color: $secondary;
+    }
+    &-contacts {
+        display: flex;
+        flex-direction: column;
+        &>a {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+    }
+}
+.questionDots {
+    position: absolute;
+    left: 45px;
+    top: 110px;
+    z-index: -1;
+}

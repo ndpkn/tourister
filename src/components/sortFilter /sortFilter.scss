@@ -1,0 +1,158 @@
+@import '../../style/variables.scss';
+
+.sortFilter {
+    width: 25%;
+    height: 100%;
+    min-width: 400px;
+    max-width: 450px;
+    border: 1px solid #E9ECEF;
+    border-radius: 1rem;
+    padding: 30px 40px;
+    margin-right: 4rem;
+    &-item {
+        border: none;
+        margin-top: 40px;
+        padding: 0;
+        &>h4 {
+            font-size: 1rem;
+            color: $thirdy;
+            font-weight: 500;
+            text-transform: capitalize;
+            margin-bottom: 1rem;
+        }
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+    &-checkbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__item {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    font-size: 1rem;
+    color: #212529;
+}
+.custom-checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #DCE5EB;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    // background-size: 50% 50%;
+}
+.custom-checkbox:checked+label::before {
+    border-color: $green;
+    background-color: $green;
+    background-image: url("/images/CheckForm.png");
+    background-size: auto;
+}
+/* стили при наведении курсора на checkbox */
+.custom-checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: $green;
+    }
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+    .custom-checkbox:not(:disabled):active+label::before {
+    background-color: $green;
+    border-color: $green;
+    }
+  /* стили для чекбокса, находящегося в фокусе */
+    .custom-checkbox:focus+label::before {
+        box-shadow: 0 0 0 3px rgba(3, 184, 150, 0.25);
+    }
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+    .custom-checkbox:focus:not(:checked)+label::before {
+    border-color: #80bdff;
+    }
+  /* стили для чекбокса, находящегося в состоянии disabled */
+    .custom-checkbox:disabled+label::before {
+    background-color: #e9ecef;
+    }
+
+
+
+.rfc-checkitem>input::before {
+    border-radius: 5px;
+}
+
+.slider {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+.thumb {
+    border: 2px solid $green;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    top: -8px;
+    background-color: #fff;
+    cursor: pointer;
+    &:focus, &:active {
+        border: 2px solid $green;
+        outline: none;
+    }
+}
+.track {
+    background-color: #DCE5EB;
+    height: 2px;
+}
+.track-1 {
+    background-color: $green;
+    height: 2px;
+}
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #DCE5EB;
+    &> input {
+        border: 1px solid #DCE5EB;
+        border-radius: 6px;
+        height: 40px;
+        width: 45%;
+        padding: 7px 1rem;
+        color: $secondary;
+        &:focus, &:focus-within, &:focus-visible, &:active, &:hover, &:target {
+            border: 2px solid $green;
+            outline: none;
+        }
+    }
+}
+
+.rw-widget-picker {
+    border: 1px solid #DCE5EB
+}
+.rw-widget-input {
+    box-shadow: none;
+    color: $secondary;
+    border-right: none;
+}
+.rw-input-addon, .rw-input-addon.rw-picker-btn {
+    border-left: none;
+    color: $secondary;
+}
+.rw-state-focus .rw-widget-picker {
+    border-color: $green;
+    box-shadow: 0 0 0 3px rgba(3, 184, 150, 0.25);
+}
+

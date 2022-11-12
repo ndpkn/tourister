@@ -1,0 +1,118 @@
+@import '../../style/variables.scss';
+
+.subscribe {
+    margin-top: 135px;
+    display: flex;
+    position: relative;
+    &-left {
+        display: grid;
+        grid-template-areas:
+                'img-1 img-2'
+                'img-1 img-3';
+        justify-content: center;
+        grid-gap: 20px;
+        &:nth-of-type(1) {
+            grid-area: img-1;
+        }
+        &:nth-of-type(2) {
+            grid-area: img-2;
+        }
+        &:nth-of-type(3) {
+            grid-area: img-3;
+        }
+        &-1 {
+            grid-column: 1 / span 4; 
+            grid-row: 1 / span 8;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        &-2 {
+            grid-column: 5 / span 4; 
+            grid-row: 1 / span 4;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+        &-3 {
+            grid-column: 5 / span 4; 
+            grid-row: 5 / span 4;
+            object-fit: cover;
+            border-radius: 30px;
+        }
+    }
+    &-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 60px 30px;
+    }
+    &-title>p {
+        font-size: 1.5rem;
+        color: $green;
+    }
+    &-header>h4 {
+        font-size: 3rem;
+        color: $primary;
+        line-height: 4.5rem;
+        font-weight: 600;
+        text-transform: capitalize;
+    }
+    &-descr {
+        font-size: 1.5rem;
+        color: $secondary;
+    }
+    &-form {
+        width: 650px;
+        &>form {
+            box-shadow: 0px 32px 84px rgba(14, 86, 124, 0.16);
+            margin-bottom: 50px;
+            display: flex;
+            &>input {
+                height: 90px;
+                width: 70%;
+                border: none;
+                padding: 25px;
+                position: relative;
+                outline: $green;
+                color: $secondary;
+                font-size: 1.5rem;
+                caret-color: $green;
+                border-right: 3px solid $green;
+                &:focus {
+                    border: 3px solid $green;
+                    &::placeholder {
+                        color: transparent;
+                        background: #fff;
+                    }
+                }
+                &::placeholder {
+                    font-size: 1.125rem;
+                    padding-left: 30px;
+                    color: $secondary;
+                    font-family: 'Poppins', sans-serif;
+                    background: url('../../images/mail.png') no-repeat left;
+                }
+            }
+            &>button {
+                height: 90px;
+                width: 30%;
+                border: none;
+                background-color: $green;
+                color: #FFFFFF;
+                font-size: 1.5rem;
+            }
+        }
+        &__descr>p {
+            color: $thirdy;
+        }
+    }
+}
+.brands {
+    margin-top: 135px;
+    margin-bottom: 135px;
+}
+.subDots {
+    position: absolute;
+    left: -40px;
+    top: -20px;
+    z-index: -1;
+}

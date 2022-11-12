@@ -1,0 +1,57 @@
+@import '../../style/variables.scss';
+
+.cta {
+    background: #28B0A6;
+    height: 500px;
+    margin-top: 130px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0px -61px 36px -20px rgba(40, 176, 166, 1) inset;
+
+    &-header> h3 {
+        font-size: 3.5rem;
+    }
+    &-descr>p {
+        font-size: 2rem;
+    }
+    &-btn> button {
+        color: $green;
+        background-color: #fff;
+        border: none;
+        font-size: 1.5rem;
+        padding: 20px 40px;
+        border-radius: 40px;
+        // z-index: 100;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 1256px;
+        height: 2376px;
+        clip-path: ellipse(50% 50% at 50% 50%);
+        background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        bottom: 0;
+        left: -40%;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 100%;
+        width: 2320px;
+        height: 2320px;
+        background: transparent;
+        box-shadow:0px 0px 0px 220px rgba(255, 255, 255, 0.15) inset;
+        right: -75%;
+        top: -100px;
+        z-index: -1;
+    }
+}
